@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { ThemeProvider } from 'styled-components';
+import GlobalStyle from 'theme/GlobalStyles';
+import { theme } from 'theme/theme';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import NavBar from 'components/organisms/NavBar/NavBar';
+import routes from 'routes';
+import { Blog, Contact, Error, Home, Shop, Product } from 'views';
+import { Menu } from 'components/molecules';
 
 function App() {
+  const { blog, contact, error, home, shop, product } = routes;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <>
+        <GlobalStyle />
+        <NavBar />
+        <BrowserRouter>
+          <Menu />
+          <Switch>
+            <Route path={blog} component={Blog} />
+            <Route path={contact} component={Contact} />
+            <Route exact path={home} component={Home} />
+            <Route exact path={shop} component={Shop} />
+            <Route path={product} component={Product} />
+            <Route path={error} component={Error} />
+          </Switch>
+        </BrowserRouter>
+      </>
+    </ThemeProvider>
   );
 }
 
