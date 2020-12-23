@@ -35,11 +35,7 @@ const StyledMenu = styled.ul`
 const Menu = () => (
   //   const [isOpen, setIsOpen] = useState(false);
   <>
-    <StyledHamburgerMenu
-      onClick={() => {
-        console.log('hello');
-      }}
-    />
+    <StyledHamburgerMenu />
     <StyledMenu>
       <MenuItem>
         <MenuLink>Home</MenuLink>
