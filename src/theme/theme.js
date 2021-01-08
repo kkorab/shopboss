@@ -20,11 +20,13 @@ export const theme = {
     primaryColor: '#000000',
     secondaryColor: '#ff7e1f',
     tertiaryColor: '#685ca2',
+    waveColor: '#fdb715',
   },
   bgColors: {
     primaryColor: '#ffebc1',
     secondaryColor: '#fdc729',
     tertiaryColor: '#fed487',
     quaternaryColor: '#fffdfb',
+    quinaryColor: '#1c1c1c',
   },
 };
