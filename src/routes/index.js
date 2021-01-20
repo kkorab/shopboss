@@ -1,8 +1,8 @@
 const routes = {
   home: '/',
   shop: '/shop',
+  catalog: '/catalog',
   contact: '/contact',
-  blog: '/blog',
   product: '/shop/:id',
 };
 

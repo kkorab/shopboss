@@ -15,18 +15,19 @@ const HamburgerMenu = styled.div`
 const StyledOverlay = styled.div`
   display: block;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.85);
   opacity: ${({ isOpen }) => (isOpen ? 1 : 0)};
-  transition: 1s all;
+  transform: ${({ isOpen }) => (isOpen ? 'translateX(0)' : 'translateX(100%)')};
+  transition: 1s opacity;
 `;
 
 const StyledMenu = styled.div`
   width: 80vw;
-  height: 100vh;
+  height: 100%;
   background: ${({ theme }) => theme.bgColors.quinaryColor};
   position: fixed;
   top: 0;
@@ -51,17 +52,16 @@ const StyledMenuListWrapper = styled.ul`
 
 const StyledMenuItem = styled.li`
   width: 100%;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 10px;
   text-align: center;
 `;
 
 const StyledLink = styled(NavLink)`
-  text-decoration: none;
   color: ${({ theme }) => theme.bgColors.primaryColor};
   font-size: ${({ theme }) => theme.fontSizes.l};
+  text-decoration: none;
   transition: 0.4s all;
-
   &.active {
     color: ${({ theme }) => theme.fontColors.waveColor};
   }
@@ -98,7 +98,7 @@ const MobileMenu = () => {
             <StyledLink to="/shop">Shop</StyledLink>
           </StyledMenuItem>
           <StyledMenuItem onClick={handleOpen}>
-            <StyledLink to="/blog">Blog</StyledLink>
+            <StyledLink to="/catalog">Catalog</StyledLink>
           </StyledMenuItem>
           <StyledMenuItem onClick={handleOpen}>
             <StyledLink to="/contact">Contact</StyledLink>

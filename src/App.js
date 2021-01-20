@@ -5,10 +5,10 @@ import routes from 'routes';
 import { ThemeProvider } from 'styled-components';
 import { theme } from 'theme/theme';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { Blog, Contact, Error, Home, Shop, Product } from 'views';
+import { Catalog, Contact, Error, Home, Shop, Product } from 'views';
 
 function App() {
-  const { blog, contact, error, home, shop, product } = routes;
+  const { contact, error, home, shop, product, catalog } = routes;
   return (
     <ThemeProvider theme={theme}>
       <>
@@ -16,8 +16,8 @@ function App() {
         <BrowserRouter>
           <NavBar />
           <Switch>
-            <Route path={blog} component={Blog} />
             <Route path={contact} component={Contact} />
+            <Route path={catalog} component={Catalog} />
             <Route exact path={shop} component={Shop} />
             <Route path={product} component={Product} />
             <Route exact path={home} component={Home} />

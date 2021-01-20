@@ -1,6 +1,11 @@
 import data from 'data';
 
-const initialState = data;
+const initialState = {
+  products: [...data],
+  currentProduct: data[0],
+  wishlist: [],
+  cart: [],
+};
 
 const rootReducer = (state = initialState, action) => {
   switch (action.type) {

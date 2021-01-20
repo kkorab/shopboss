@@ -14,6 +14,9 @@ const StyledNav = styled.nav`
   position: fixed;
   top: 0;
   left: 0;
+  background: ${({ pathname, theme }) =>
+    pathname !== '/' ? theme.bgColors.waveColor : null};
+  /* box-shadow: 0px 20px 40px -5px rgba(0, 0, 0, 0.3); */
 `;
 
 const StyledNavWrapper = styled.div`
@@ -27,7 +30,7 @@ const StyledNavWrapper = styled.div`
 const NavBar = () => {
   let { pathname } = useLocation();
   return (
-    <StyledNav>
+    <StyledNav pathname={pathname}>
       <StyledNavWrapper pathname={pathname}>
         <Logo />
         {pathname !== '/' && <MobileMenu />}

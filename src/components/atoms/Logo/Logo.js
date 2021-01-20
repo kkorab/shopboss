@@ -2,12 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 import priceTag from 'assets/svg/price-tag.svg';
 import { useLocation } from 'react-router';
+import { NavLink } from 'react-router-dom';
 
 const flexDisplay = `display: flex; justify-content: center; align-items: center;`;
 
-const StyledWrapper = styled.div`
+const StyledWrapper = styled(NavLink)`
+  text-decoration: none;
+  color: ${({ theme }) => theme.fontColors.primaryColor};
   height: 100%;
   ${flexDisplay}
+  z-index: 0;
 `;
 
 const StyledImage = styled.img`
@@ -36,7 +40,7 @@ const StyledLogo = styled.h1`
 const Logo = () => {
   let { pathname } = useLocation();
   return (
-    <StyledWrapper>
+    <StyledWrapper to="/">
       <StyledCircle pathname={pathname}>
         <StyledImage pathname={pathname} src={priceTag} />
       </StyledCircle>
