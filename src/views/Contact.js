@@ -1,16 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
-const StyledWrapper = styled.div`
-  margin: 0 auto;
-  padding-top: 100px;
-  width: 90%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
+import { PageWrapper } from 'components/atoms';
 
 const StyledCnt = styled.div`
   margin: 2rem 0;
@@ -63,7 +53,7 @@ const StyledP = styled.p`
 `;
 
 const Contact = () => (
-  <StyledWrapper>
+  <PageWrapper center>
     <StyledCnt>
       <StyledH1>Contact information</StyledH1>
       <StyledAddress>95 Wall Street, New York, NY 10153</StyledAddress>
@@ -72,7 +62,6 @@ const Contact = () => (
       </StyledP>
       <StyledP>We are open from Monday - Friday 08:00 am - 05:00 pm</StyledP>
     </StyledCnt>
-
     <StyledCnt>
       <StyledH1>Follow us</StyledH1>
       <StyledSocialsWrapper>
@@ -81,7 +70,7 @@ const Contact = () => (
         <StyledSocial>linkedin</StyledSocial>
       </StyledSocialsWrapper>
     </StyledCnt>
-  </StyledWrapper>
+  </PageWrapper>
 );
 
 export default Contact;

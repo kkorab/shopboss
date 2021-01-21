@@ -1,9 +1,9 @@
 import React from 'react';
 import GlobalStyle from 'theme/GlobalStyles';
-import NavBar from 'components/organisms/NavBar/NavBar';
 import routes from 'routes';
 import { ThemeProvider } from 'styled-components';
 import { theme } from 'theme/theme';
+import { MobileBottomBar, NavBar } from 'components/organisms';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Catalog, Contact, Error, Home, Shop, Product } from 'views';
 
@@ -15,6 +15,7 @@ function App() {
         <GlobalStyle />
         <BrowserRouter>
           <NavBar />
+          <MobileBottomBar />
           <Switch>
             <Route path={contact} component={Contact} />
             <Route path={catalog} component={Catalog} />
