@@ -103,9 +103,7 @@ const ProductCard = ({ productData }) => {
         <StyledProductName>{title}</StyledProductName>
         <StyledProductPrice>$ {price.toFixed(2)}</StyledProductPrice>
         <StyledButton>
-          <StyledLink to={`/shop/productid-${id}`}>
-            See product &#187;
-          </StyledLink>
+          <StyledLink to={`/products/${id}`}>See product &#187;</StyledLink>
         </StyledButton>
       </StyledContentWrapper>
     </StyledWrapper>

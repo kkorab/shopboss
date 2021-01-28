@@ -4,14 +4,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import StarIcon from '@material-ui/icons/Star';
 import StarBorderIcon from '@material-ui/icons/StarBorder';
-import { SelectSize } from 'components/atoms';
-
-const StyledProductWrapper = styled.div`
-  padding-top: 100px;
-  width: 90%;
-  margin: 0 auto;
-  font-family: ${({ theme }) => theme.fontFamilies.yusei};
-`;
+import { PageWrapper, SelectSize } from 'components/atoms';
 
 const StyledImageContainer = styled.div`
   margin: 0rem 0 2rem 0;
@@ -25,7 +18,7 @@ const StyledImageContainer = styled.div`
 `;
 
 const StyledImg = styled.img`
-  width: 70%;
+  width: 50%;
 `;
 
 const StyledProductTitle = styled.h1`
@@ -66,7 +59,7 @@ const Product = ({ currentProduct }) => {
   const { title, price, description, category, image } = productData;
   const fixedCategory = category.replace(' ', ' / ');
   return (
-    <StyledProductWrapper>
+    <PageWrapper>
       <StyledCategory>category: {fixedCategory}</StyledCategory>
       <StyledImageContainer>
         <StyledImg src={image} />
@@ -82,7 +75,7 @@ const Product = ({ currentProduct }) => {
       </StyledStarsContainer>
       <StyledDesc>{description}</StyledDesc>
       <SelectSize />
-    </StyledProductWrapper>
+    </PageWrapper>
   );
 };
 

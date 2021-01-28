@@ -4,5 +4,7 @@ import Home from './Home';
 import Shop from './Shop';
 import Product from './Product';
 import Catalog from './Catalog';
+import Cart from './Cart';
+import Wishlist from './Wishlist';
 
-export { Catalog, Contact, Error, Home, Shop, Product };
+export { Catalog, Contact, Error, Home, Shop, Product, Cart, Wishlist };

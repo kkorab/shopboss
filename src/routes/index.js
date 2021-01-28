@@ -3,7 +3,9 @@ const routes = {
   shop: '/shop',
   catalog: '/catalog',
   contact: '/contact',
-  product: '/shop/:id',
+  product: '/products/:id',
+  cart: '/cart',
+  wishlist: '/wishlist',
 };
 
 export default routes;

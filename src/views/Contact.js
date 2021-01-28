@@ -52,8 +52,22 @@ const StyledP = styled.p`
   }
 `;
 
+const StyledGoogleMap = styled.iframe`
+  margin-top: 2rem;
+  width: 100%;
+  height: 450px;
+  border: 4px solid ${({ theme }) => theme.fontColors.tertiaryColor};
+`;
+
 const Contact = () => (
   <PageWrapper center>
+    <StyledGoogleMap
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.5991290458105!2d-74.00975078434473!3d40.70482554599097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a160e9cdf99%3A0xb5060ffe1db10e52!2s95%20Wall%20St%2C%20New%20York%2C%20NY%2010005%2C%20Stany%20Zjednoczone!5e0!3m2!1spl!2spl!4v1611743927474!5m2!1spl!2spl"
+      frameBorder=""
+      allowFullScreen=""
+      aria-hidden="false"
+      title="google-map"
+    />
     <StyledCnt>
       <StyledH1>Contact information</StyledH1>
       <StyledAddress>95 Wall Street, New York, NY 10153</StyledAddress>
